@@ -1,0 +1,17 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@font-face {
+  font-family: Neue;
+  src: url(assets/Fonts/NeueMontreal-Regular.ttf);
+}
+
+@font-face {
+  font-family: Founder;
+  src: url(assets/Fonts/FoundersGrotesk-Semibold.ttf);
+}
+
+body {
+  font-family: Neue;
+}
