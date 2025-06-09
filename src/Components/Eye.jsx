@@ -15,27 +15,27 @@ function Eyes() {
   });
   return (
     <div className="flex gap-10 absolute top-1/2 left-1/2 -translate-x-[50%] -translate-y-[50%]">
-      <div className="rounded-full w-[15vw] h-[15vw] bg-zinc-100 flex items-center justify-center">
+      <div className="rounded-full w-[35vw] h-[35vw] md:w-[15vw] md:h-[15vw] bg-zinc-100 flex items-center justify-center">
         <div className="relative w-2/3 h-2/3 rounded-full bg-zinc-900">
           <div
             style={{
               transform: `translate(-50%,-50%) rotate(${rotate}deg)`,
             }}
-            className="line absolute top-1/2 left-1/2 -translate-x-[50%] -translate-y-[50%] w-full h-10"
+            className="line absolute top-1/2 left-1/2 -translate-x-[50%] -translate-y-[50%] w-full h-6 md:h-10"
           >
-            <div className="w-10 h-10 rounded-full bg-zinc-100"></div>
+            <div className="w-6 h-6 md:w-10 md:h-10 rounded-full bg-zinc-100"></div>
           </div>
         </div>
       </div>
-      <div className="rounded-full w-[15vw] h-[15vw] bg-zinc-100 flex items-center justify-center">
+      <div className="rounded-full w-[35vw] h-[35vw] md:w-[15vw] md:h-[15vw] bg-zinc-100 flex items-center justify-center">
         <div className="relative w-2/3 h-2/3 rounded-full bg-zinc-900">
           <div
             style={{
               transform: `translate(-50%,-50%) rotate(${rotate}deg)`,
             }}
-            className="line absolute top-1/2 left-1/2 -translate-x-[50%] -translate-y-[50%] w-full h-10"
+            className="line absolute top-1/2 left-1/2 -translate-x-[50%] -translate-y-[50%] w-full h-6 md:h-10"
           >
-            <div className="w-10 h-10 rounded-full bg-zinc-100"></div>
+            <div className="w-6 h-6 md:w-10 md:h-10 rounded-full bg-zinc-100"></div>
           </div>
         </div>
       </div>

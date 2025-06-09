@@ -6,14 +6,14 @@ function Marquee() {
       data-scroll
       data-scroll-section
       data-scroll-speed=".1"
-      className="w-full py-20 rounded-tl-3xl rounded-tr-3xl bg-[#004D43] text-white"
+      className="w-full py-10 md:py-20 rounded-tl-3xl rounded-tr-3xl bg-[#004D43] text-white"
     >
       <div className="text border-t-[1px] border-b-[1px] border-zinc-100 whitespace-nowrap overflow-hidden flex items-center">
         <motion.h1
           initial={{ x: 0 }}
           animate={{ x: "-100%" }}
           transition={{ ease: "linear", repeat: Infinity, duration: 10 }}
-          className="text-[45vh] font-[Founder] leading-none uppercase -mb-10 -mt-20 pr-16"
+          className="text-[28vh] md:text-[45vh] font-[Founder] leading-none uppercase -mb-5 md:-mb-10 -mt-10 md:-mt-20 pr-8 md:pr-16"
         >
           We are ochi
         </motion.h1>
@@ -21,7 +21,7 @@ function Marquee() {
           initial={{ x: 0 }}
           animate={{ x: "-100%" }}
           transition={{ ease: "linear", repeat: Infinity, duration: 10 }}
-          className="text-[45vh] font-[Founder] leading-none uppercase -mb-10 -mt-20 pr-16"
+          className="text-[28vh] md:text-[45vh] font-[Founder] leading-none uppercase -mb-5 md:-mb-10 -mt-10 md:-mt-20 pr-8 md:pr-16"
         >
           We are ochi
         </motion.h1>
