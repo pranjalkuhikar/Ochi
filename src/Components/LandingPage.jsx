@@ -27,7 +27,7 @@ function LandingPage() {
                     />
                   </motion.div>
                 )}
-                <h1 className="text-[13vw] md:text-[9vw] leading-[11vw] md:leading-[7vw] tracking-tight md:tracking-tighter font-[Founder] font-semibold uppercase">
+                <h1 className="text-[13vw] md:text-[9vw] leading-[11vw] md:leading-[7vw] tracking-tight font-[Founder] font-semibold uppercase">
                   {item}
                 </h1>
               </div>
