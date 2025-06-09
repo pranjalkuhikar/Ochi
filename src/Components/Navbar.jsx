@@ -1,6 +1,15 @@
+import { useState } from "react";
+import { FiMenu, FiX } from "react-icons/fi";
+
 function Navbar() {
+  const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+
+  const toggleMobileMenu = () => {
+    setIsMobileMenuOpen(!isMobileMenuOpen);
+  };
+
   return (
-    <div className="w-full fixed z-[999] px-4 md:px-20 py-8 font-['NeueMontreal-Regular ttf'] flex items-center justify-between">
+    <nav className="w-full fixed z-[999] px-4 md:px-20 py-4 md:py-8 font-['NeueMontreal-Regular ttf'] flex items-center justify-between bg-transparent md:shadow-none">
       <div className="logo">
         <svg
           width="72"
@@ -32,21 +41,47 @@ function Navbar() {
           ></path>
         </svg>
       </div>
+      {/* Desktop Menu */}
       <div className="links hidden md:flex gap-4 lg:gap-10">
         {["Services", "Our works", "About Us", "Insight", "Contact"].map(
           (item, index) => (
             <a
               key={index}
-              className={`text-md lg:text-lg font-light ${
-                index === 4 && "ml-12 lg:ml-32 xl:ml-56"
-              }`}
+              href="#"
+              className={`text-base lg:text-lg font-light hover:text-gray-500 transition-colors ${
+                index === 4 && "md:ml-12 lg:ml-32 xl:ml-56"
+              }`} // Adjusted margin for desktop
             >
               {item}
             </a>
           )
         )}
       </div>
-    </div>
+
+      {/* Mobile Menu Button */}
+      <div className="md:hidden">
+        <button onClick={toggleMobileMenu} className="text-2xl">
+          {isMobileMenuOpen ? <FiX /> : <FiMenu />}
+        </button>
+      </div>
+
+      {/* Mobile Menu */}
+      {isMobileMenuOpen && (
+        <div className="absolute top-full left-0 w-full bg-white shadow-md py-4 flex flex-col items-center md:hidden">
+          {["Services", "Our works", "About Us", "Insight", "Contact"].map(
+            (item, index) => (
+              <a
+                key={index}
+                href="#"
+                className="text-base font-light py-2 hover:text-gray-500 transition-colors"
+              >
+                {item}
+              </a>
+            )
+          )}
+        </div>
+      )}
+    </nav>
   );
 }
 
